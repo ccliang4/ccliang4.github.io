@@ -13,7 +13,7 @@ const VerMatrix = [3, 1, 3, 5];
 const AntMatrix = [0, 1, 3, -1];
 
 const NFArray = [
-	27.500, 29.135, 30.868,
+	                                                                        27.500, 29.135, 30.868,
 	32.703, 34.648, 36.708, 38.891, 41.203, 43.654, 46.249, 48.999, 51.913, 55.000, 58.270, 61.735,
 	65.406, 69.296, 73.416, 77.782, 82.407, 87.307, 92.499, 97.999, 103.826, 110.000, 116.541, 123.471,
 	130.813, 138.591, 146.832, 155.563, 164.814, 174.614, 184.997, 195.998, 207.652, 220.000, 233.082, 246.942,
@@ -39,17 +39,9 @@ const VerLenDirMatrix = [
 	[[0, 1, 1, 2], [0, 0, 2, 1], [-1, 0, 0, 2], [0, -1, 0, 0]],
 	[[0, 2, 2, 2], [0, 1, 0, 0], [-2, 0, 0, 2], [0, 0, 1, 1]]
 ];
-//const VerLenDirMatrix = [
-//	[[1, 0, 1], [4, 3, 4], [0, -1, 0], [-3, -4, -3]],
-//	[[7, 8, 7], [3, 4, 3], [-4, -3, -4], [0, 1, 0]],
-//	[[7, 6, 7], [0, -1, 0], [-3, -4, -3], [4, 3, 4]],
-//	[[-1, 0, -1], [-4, -3, -4], [0, 1, 0], [3, 4, 3]],
-//	[[-7, -8, -7], [-3, -4, -3], [4, 3, 4], [0, -1, 0]],
-//	[[-7, -6, -7], [0, 1, 0], [3, 4, 3], [-4, -3, -4]]
-//];
 
 var Run = -1, Delay = 500, Notes = [-4, 0, 3];
-var Vertex, Reverse, Pos, posMap, ci, AntDir;
+var Vertex, Reverse, Pos, posMap, ci, AntDir, os = [];
 
 function update() {
 	ci = posMap.get(Pos.toString());
@@ -108,9 +100,17 @@ function sound() {
 	let currentTime = audioContext.currentTime;
 	let sortedNotes = Notes.toSorted((a, b) => a - b);
 
-	function playTone(frequency, wtype, volume, ctime, duration) {
-		const oscillator = audioContext.createOscillator();
+	while(os.length > 0) {
+		let o = os.pop();
+		o.stop();
+		o.disconnect();
+	}
 
+	function playTone(frequency, wtype, volume, ctime, duration) {
+		if (audioContext.state === 'suspended') {
+			audioContext.resume();
+		}
+		const oscillator = audioContext.createOscillator();
 		oscillator.type = wtype;
 		oscillator.frequency.setValueAtTime(frequency, ctime);
 		const gainNode = audioContext.createGain();
@@ -119,6 +119,7 @@ function sound() {
 		gainNode.connect(audioContext.destination);
 		oscillator.start(ctime);
 		oscillator.stop(ctime + duration);
+		os.push(oscillator);
 	}
 
 	function playSine() {
@@ -172,15 +173,24 @@ function initialize() {
 	Run = 0;
 	Vertex = parseInt($('#vertex').val(), 10);
 	AntDir = Vertex;
+	Reverse = 0;
+	if ($('#reverse').prop('checked')) {
+		Reverse = 1;
+		if (Vertex % 2 === 0) {
+			Vertex = (Vertex + 3) % 6;
+			Reverse = 0;
+		}
+		AntDir = (AntDir + 3) % 6;
+	} else {
+		if (Vertex % 2) {
+			Vertex = (Vertex + 3) % 6;
+			Reverse = 1;
+		}
+	}
 	if (Vertex % 2) {
 		Pos = [1, 0];
 	} else {
 		Pos = [0, 0];
-	}
-	Reverse = 0;
-	if ($('#reverse').prop('checked')) {
-		Reverse = 1;
-		AntDir = (AntDir + 3) % 6;
 	}
 	let note = (parseInt($('#octave').val(), 10) - 4) * 12 + parseInt($('#note').val(), 10);
 	ColorDirList.length = 0;
