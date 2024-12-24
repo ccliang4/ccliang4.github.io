@@ -1,0 +1,259 @@
+{
+    "SurveyEntry": {
+        "SurveyID": "SV_1G4KVPGqyUTEFJY",
+        "SurveyName": "Qualtrics Stimuli Questions",
+        "SurveyDescription": null,
+        "SurveyOwnerID": "UR_bdvIi4SkjaulNbM",
+        "SurveyBrandID": "ubc",
+        "DivisionID": "DV_basyGSrdgl4c83b",
+        "SurveyLanguage": "EN",
+        "SurveyActiveResponseSet": "RS_207xSUDU60p5Zzw",
+        "SurveyStatus": "Inactive",
+        "SurveyStartDate": "0000-00-00 00:00:00",
+        "SurveyExpirationDate": "0000-00-00 00:00:00",
+        "SurveyCreationDate": "2024-10-19 22:03:25",
+        "CreatorID": "UR_bdvIi4SkjaulNbM",
+        "LastModified": "2024-10-19 22:04:38",
+        "LastAccessed": "0000-00-00 00:00:00",
+        "LastActivated": "0000-00-00 00:00:00",
+        "Deleted": null
+    },
+    "SurveyElements": [
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "BL",
+            "PrimaryAttribute": "Survey Blocks",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": [
+                {
+                    "Type": "Trash",
+                    "Description": "Trash / Unused Questions",
+                    "ID": "BL_9sniaKbXOkNIAU6",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID0"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "FAST",
+                    "ID": "BL_6QHflrK5pLqlyZM",
+                    "BlockElements": []
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "SLOW",
+                    "ID": "BL_6L6k06tpyHXeqNM",
+                    "BlockElements": []
+                }
+            ]
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "FL",
+            "PrimaryAttribute": "Survey Flow",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "Flow": [
+                    {
+                        "ID": "BL_6QHflrK5pLqlyZM",
+                        "Type": "Block",
+                        "FlowID": "FL_2"
+                    },
+                    {
+                        "ID": "BL_6L6k06tpyHXeqNM",
+                        "Type": "Standard",
+                        "FlowID": "FL_5"
+                    }
+                ],
+                "Properties": {
+                    "Count": 11
+                },
+                "FlowID": "FL_1",
+                "Type": "Root"
+            }
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "PL",
+            "PrimaryAttribute": "Preview Link",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "PreviewType": "Brand",
+                "PreviewID": "d3f08a67-ff69-4f15-9361-82e4a4a4e182"
+            }
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "SO",
+            "PrimaryAttribute": "Survey Options",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "BackButton": "false",
+                "SaveAndContinue": "true",
+                "SurveyProtection": "PublicSurvey",
+                "BallotBoxStuffingPrevention": "false",
+                "NoIndex": "Yes",
+                "SecureResponseFiles": "true",
+                "SurveyExpiration": "None",
+                "SurveyTermination": "DefaultMessage",
+                "Header": "",
+                "Footer": "",
+                "ProgressBarDisplay": "None",
+                "PartialData": "+1 week",
+                "ValidationMessage": "",
+                "PreviousButton": "",
+                "NextButton": "",
+                "SurveyTitle": "Qualtrics Survey | Qualtrics Experience Management",
+                "SkinLibrary": "ubc",
+                "SkinType": "templated",
+                "Skin": {
+                    "brandingId": "968975653",
+                    "templateId": "*base",
+                    "overrides": null
+                },
+                "NewScoring": 1,
+                "SurveyMetaDescription": "The most powerful, simple and trusted way to gather experience data. Start your journey to experience management and try a free account today."
+            }
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "SCO",
+            "PrimaryAttribute": "Scoring",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "ScoringCategories": [],
+                "ScoringCategoryGroups": [],
+                "ScoringSummaryCategory": null,
+                "ScoringSummaryAfterQuestions": 0,
+                "ScoringSummaryAfterSurvey": 0,
+                "DefaultScoringCategory": null,
+                "AutoScoringCategory": null
+            }
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "PROJ",
+            "PrimaryAttribute": "CORE",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": "1.1.0",
+            "Payload": {
+                "ProjectCategory": "CORE",
+                "SchemaVersion": "1.1.0"
+            }
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "STAT",
+            "PrimaryAttribute": "Survey Statistics",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "MobileCompatible": true,
+                "ID": "Survey Statistics"
+            }
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "QC",
+            "PrimaryAttribute": "Survey Question Count",
+            "SecondaryAttribute": "10",
+            "TertiaryAttribute": null,
+            "Payload": null
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "RS",
+            "PrimaryAttribute": "RS_207xSUDU60p5Zzw",
+            "SecondaryAttribute": "Default Response Set",
+            "TertiaryAttribute": null,
+            "Payload": null
+        },
+        {
+            "SurveyID": "SV_1G4KVPGqyUTEFJY",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID0",
+            "SecondaryAttribute": "Listen to this rhythmic pattern, and rate the complexity of the rhythm.",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Listen to this rhythmic pattern, and rate the complexity of the rhythm.\n<div><br />\n<audio id=\"audio\" class=\"qmedia\" controls=\"true\" controlslist=\"noplaybackrate\"  height=\"40\" preload=\"auto\" width=\"320\"><source src=\"https://ubc.ca1.qualtrics.com/CP/File.php?F=F_3UAmMHgNlVKpQvc\" type=\"audio/mp3\" /><embed class=\"qmedia\" flashconsts=\"file=https://ubc.ca1.qualtrics.com/CP/File.php?F=F_3UAmMHgNlVKpQvc&amp;width=320&amp;height=20&amp;type=mp3&amp;autostart=false\" height=\"20\" pluginspage=\"http://adobe.com/flashplayer/\" src=\"/WRQualtricsShared/Flash/flvplayer.swf\" type=\"application/x-shockwave-flash\" width=\"320\" wmode=\"transparent\" /></audio>\n</div>",
+                "DefaultChoices": false,
+                "DataExportTag": "SLOW_6",
+                "QuestionType": "Matrix",
+                "Selector": "Likert",
+                "SubSelector": "SingleAnswer",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "TextPosition": "inline",
+                    "ChoiceColumnWidth": 25,
+                    "ChoiceColumnWidthPixels": 10,
+                    "RepeatHeaders": "none",
+                    "WhiteSpace": "OFF",
+                    "MobileFirst": true
+                },
+                "QuestionDescription": "Listen to this rhythmic pattern, and rate the complexity of the rhythm.",
+                "Choices": {
+                    "1": {
+                        "Display": "&nbsp;"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 2,
+                "NextAnswerId": 7,
+                "Answers": {
+                    "1": {
+                        "Display": "Very simple"
+                    },
+                    "2": {
+                        "Display": "Simple"
+                    },
+                    "3": {
+                        "Display": "Somewhat simple"
+                    },
+                    "4": {
+                        "Display": "Somewhat complex"
+                    },
+                    "5": {
+                        "Display": "Complex"
+                    },
+                    "6": {
+                        "Display": "Very complex"
+                    }
+                },
+                "AnswerOrder": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "ChoiceDataExportTags": false,
+                "QuestionID": "QID0",
+                "QuestionJS": "Qualtrics.SurveyEngine.addOnload(function()\n{\n\t/*Place your JavaScript here to run when the page loads*/\n\t\n\t// Hides the button that moves to the next question\n\tjQuery(\"#NextButton\").css(\"visibility\",\"hidden\");\n\t\n\t$('audio').on('playing', function() {\n\t\tjQuery(\"#NextButton\").css(\"visibility\",\"visible\");\n\t});\n});\n\nQualtrics.SurveyEngine.addOnReady(function()\n{\n\t/*Place your JavaScript here to run when the page is fully displayed*/\n\n});\n\nQualtrics.SurveyEngine.addOnUnload(function()\n{\n\t/*Place your JavaScript here to run when the page is unloaded*/\n\n});"
+            }
+        }
+    ]
+}
